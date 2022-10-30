@@ -24,4 +24,4 @@ def merge_sort(s); #відповідно сортирує список
     return merge_two_list(left,right) #обєднюєм ліву та праву частини
  
 list = input('Enter the list of numbers: ').split()
-print(merge_sort(list))
+print(*merge_sort(list))
