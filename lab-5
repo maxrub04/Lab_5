@@ -1,4 +1,4 @@
-def merge_two_list(a,b); #обєднює два списки
+def merge_two_list(a,b): #обєднює два списки
     c = [] #список
     i = j = 0 #вказівники на перші елементи списків a і b відповідно
     while i<len(a) and j<len(b):
@@ -11,17 +11,17 @@ def merge_two_list(a,b); #обєднює два списки
     if i<len(a):
         c += a[i:]
     if j<len(b):
-        c += b[j:]:
+        c += b[j:]
     return c
 
 
-def merge_sort(s); #відповідно сортирує список
+def merge_sort(s): #відповідно сортирує список
     if len(s)==1: 
         return s
     middle = len (s)//2 #середина списку
     left = merge_sort(s[:middle]) #сріз від початку до середини(не включно)
     right = merge_sort(s[middle:]) #сріз від середини до кінця(не включно)
     return merge_two_list(left,right) #обєднюєм ліву та праву частини
- 
+
 list = input('Enter the list of numbers: ').split()
 print(*merge_sort(list))
